@@ -1,0 +1,741 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>84/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 26 17:10:23 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>1054 seconds (1054940 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC05 - All visible product prices (not just first) show BHD after INR switch", "Country Currency Switch on WowFashions"</td>
+<td><div><pre>java.lang.AssertionError: All visible product prices should contain: BHD expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CountryCurrencySteps.all_visible_prices_contain_symbol(CountryCurrencySteps.java:126)
+	at ✽.all visible product prices contain the &quot;BHD&quot; currency symbol(classpath:features/CountryCurrency.feature:38)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1432215469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1432215469'><pre>java.lang.AssertionError: All visible product prices should contain: BHD expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CountryCurrencySteps.all_visible_prices_contain_symbol(CountryCurrencySteps.java:126)
+	at ✽.all visible product prices contain the &quot;BHD&quot; currency symbol(classpath:features/CountryCurrency.feature:38)
+</pre></div></td>
+<td>53</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F12 - Cart subtotal updates after quantity increase", "Fabrics Product Add to Cart on WowFashions"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;increment&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;plus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyIncrement(CartPage.java:187)
+	at stepdefinitions.FabricsAddToCartSteps.user_increments_the_fabrics_cart_quantity(FabricsAddToCartSteps.java:275)
+	at ✽.user increments the fabrics cart quantity(classpath:features/FabricsAddToCart.feature:63)
+</pre></div><a href='#' onClick='toggleBox("stack-trace387545659", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace387545659'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;increment&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;plus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyIncrement(CartPage.java:187)
+	at stepdefinitions.FabricsAddToCartSteps.user_increments_the_fabrics_cart_quantity(FabricsAddToCartSteps.java:275)
+	at ✽.user increments the fabrics cart quantity(classpath:features/FabricsAddToCart.feature:63)
+</pre></div></td>
+<td>69</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC03 - Switching to BHD changes all product prices to BHD", "Country Currency Switch on WowFashions"</td>
+<td><div><pre>java.lang.AssertionError: All product prices should contain the symbol: BHD expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CountryCurrencySteps.all_prices_show_symbol(CountryCurrencySteps.java:107)
+	at ✽.all product prices show the &quot;BHD&quot; currency symbol(classpath:features/CountryCurrency.feature:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace926232624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace926232624'><pre>java.lang.AssertionError: All product prices should contain the symbol: BHD expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.CountryCurrencySteps.all_prices_show_symbol(CountryCurrencySteps.java:107)
+	at ✽.all product prices show the &quot;BHD&quot; currency symbol(classpath:features/CountryCurrency.feature:26)
+</pre></div></td>
+<td>51</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F13 - Cart quantity does not go below 1 when decrement clicked at minimum", "Fabrics Product Add to Cart on WowFashions"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;decrement&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;minus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyDecrement(CartPage.java:200)
+	at stepdefinitions.FabricsAddToCartSteps.user_decrements_the_fabrics_cart_quantity_to_minimum(FabricsAddToCartSteps.java:333)
+	at ✽.user decrements the fabrics cart quantity to minimum(classpath:features/FabricsAddToCart.feature:71)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2117709836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2117709836'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;decrement&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;minus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyDecrement(CartPage.java:200)
+	at stepdefinitions.FabricsAddToCartSteps.user_decrements_the_fabrics_cart_quantity_to_minimum(FabricsAddToCartSteps.java:333)
+	at ✽.user decrements the fabrics cart quantity to minimum(classpath:features/FabricsAddToCart.feature:71)
+</pre></div></td>
+<td>49</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F10 - Product price in cart is correct for fabric product", "Fabrics Product Add to Cart on WowFashions"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//main//*[contains(text(),&apos;₹&apos;) and not(ancestor::header)])[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementVisible(WaitUtils.java:23)
+	at utils.WaitUtils.waitForVisible(WaitUtils.java:35)
+	at pages.CartPage.getCartProductPrice(CartPage.java:158)
+	at stepdefinitions.FabricsAddToCartSteps.the_fabrics_product_price_in_cart_is_correct(FabricsAddToCartSteps.java:253)
+	at ✽.the fabrics product price in cart is correct(classpath:features/FabricsAddToCart.feature:50)
+</pre></div><a href='#' onClick='toggleBox("stack-trace719058259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace719058259'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//main//*[contains(text(),&apos;₹&apos;) and not(ancestor::header)])[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementVisible(WaitUtils.java:23)
+	at utils.WaitUtils.waitForVisible(WaitUtils.java:35)
+	at pages.CartPage.getCartProductPrice(CartPage.java:158)
+	at stepdefinitions.FabricsAddToCartSteps.the_fabrics_product_price_in_cart_is_correct(FabricsAddToCartSteps.java:253)
+	at ✽.the fabrics product price in cart is correct(classpath:features/FabricsAddToCart.feature:50)
+</pre></div></td>
+<td>27</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F11 - Cart quantity increases when increment button is clicked", "Fabrics Product Add to Cart on WowFashions"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;increment&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;plus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyIncrement(CartPage.java:187)
+	at stepdefinitions.FabricsAddToCartSteps.user_increments_the_fabrics_cart_quantity(FabricsAddToCartSteps.java:275)
+	at ✽.user increments the fabrics cart quantity(classpath:features/FabricsAddToCart.feature:57)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2134496754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134496754'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: [class*=&apos;cart-item&apos;] [class*=&apos;increment&apos;], [class*=&apos;cart-item&apos;] [class*=&apos;plus&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.CartPage.clickCartQtyIncrement(CartPage.java:187)
+	at stepdefinitions.FabricsAddToCartSteps.user_increments_the_fabrics_cart_quantity(FabricsAddToCartSteps.java:275)
+	at ✽.user increments the fabrics cart quantity(classpath:features/FabricsAddToCart.feature:57)
+</pre></div></td>
+<td>69</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC07 - Wrong OTP shows error message", "Sign In on WowFashions"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button[class*=&apos;otp&apos;], button[id*=&apos;otp&apos;], button[id*=&apos;sendOtp&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.SignInPage.clickSendOtp(SignInPage.java:175)
+	at stepdefinitions.SignInSteps.user_enters_valid_email_and_clicks_send_otp(SignInSteps.java:92)
+	at ✽.user enters valid email and clicks Send OTP(classpath:features/SignIn.feature:45)
+</pre></div><a href='#' onClick='toggleBox("stack-trace925024094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace925024094'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button[class*=&apos;otp&apos;], button[id*=&apos;otp&apos;], button[id*=&apos;sendOtp&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64791}, goog:processID: 7588, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64791/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dd5b2929ab0ceb22853673b222502af
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForElementClickable(WaitUtils.java:27)
+	at utils.WaitUtils.waitForClickable(WaitUtils.java:39)
+	at pages.SignInPage.clickSendOtp(SignInPage.java:175)
+	at stepdefinitions.SignInSteps.user_enters_valid_email_and_clicks_send_otp(SignInSteps.java:92)
+	at ✽.user enters valid email and clicks Send OTP(classpath:features/SignIn.feature:45)
+</pre></div></td>
+<td>23</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC06 - Cart badge count increments after adding", "Add to Cart on WowFashions"</td>
+<td><div><pre>java.lang.AssertionError: Cart badge should increment. Before: 1, After: 1 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.AddToCartSteps.cart_badge_count_increments(AddToCartSteps.java:183)
+	at ✽.the cart badge count increments(classpath:features/AddToCart.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace741394461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace741394461'><pre>java.lang.AssertionError: Cart badge should increment. Before: 1, After: 1 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.AddToCartSteps.cart_badge_count_increments(AddToCartSteps.java:183)
+	at ✽.the cart badge count increments(classpath:features/AddToCart.feature:36)
+</pre></div></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F07 - Cart badge count increments after adding fabric product", "Fabrics Product Add to Cart on WowFashions"</td>
+<td><div><pre>java.lang.AssertionError: Cart badge should increment. Before: 1, After: 1 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.FabricsAddToCartSteps.the_fabrics_cart_badge_count_increments(FabricsAddToCartSteps.java:186)
+	at ✽.the fabrics cart badge count increments(classpath:features/FabricsAddToCart.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace246743306", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace246743306'><pre>java.lang.AssertionError: Cart badge should increment. Before: 1, After: 1 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinitions.FabricsAddToCartSteps.the_fabrics_cart_badge_count_increments(FabricsAddToCartSteps.java:186)
+	at ✽.the fabrics cart badge count increments(classpath:features/FabricsAddToCart.feature:33)
+</pre></div></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC01 - Country selector widget is visible in the header", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User applies both Fabric Material and Neck Pattern filters", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>8</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User sets a custom Min Price using input box", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Very long search keyword does not crash", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F05 - Add to Cart button is clickable on fabrics page", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Resetting price filter restores default range", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>12</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search trims whitespace and returns results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with invalid keyword shows no results", "Search Functionality"</td>
+<td></td>
+<td>12</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC08 - Product name in cart matches product page", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with special characters does not crash", "Search Functionality"</td>
+<td></td>
+<td>1</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC07 - Cart shows the added product", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User selects multiple fabrics", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>14</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC05 - Invalid email format shows form validation error", "Sign In on WowFashions"</td>
+<td></td>
+<td>34</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with special characters does not crash", "Search Functionality"</td>
+<td></td>
+<td>1</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC02 - Product name is displayed", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with valid keyword shows results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>10</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search is case-insensitive", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC10 - User can remove item from cart", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>34</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F01 - Fabrics product page loads successfully", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>3</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC01 - Sign-in page loads successfully", "Sign In on WowFashions"</td>
+<td></td>
+<td>3</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC09 - Product price in cart is correct", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User selects single fabric - Linen", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>10</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Setting Min Price higher than Max Price shows no results or error", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>10</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with invalid keyword shows no results", "Search Functionality"</td>
+<td></td>
+<td>12</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price slider moves when Min input value changes", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC03 - Valid email and valid OTP results in successful sign-in", "Sign In on WowFashions"</td>
+<td></td>
+<td>8</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC10 - Product prices are non-empty after country switch", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC09 - User can successfully logout", "Sign In on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Partial keyword search returns results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC04 - Send OTP button is disabled when email is empty", "Sign In on WowFashions"</td>
+<td></td>
+<td>3</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC01 - Product page loads successfully", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC04 - Add to Cart button is visible and clickable", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC06 - Country to currency mapping is correct", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>17</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with valid keyword shows results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F04 - Add to Cart button is visible on fabrics page", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F15 - Cart item count decreases after removing one item", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>7</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC04 - Switching back to India from UAE restores INR prices", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>20</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F03 - Product price is displayed on the fabrics page", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC02 - Valid email triggers OTP section", "Sign In on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search is case-insensitive", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User sets both Min and Max price range", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Neck Pattern section is collapsed by default", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price range filter with boundary values", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC08 - Short OTP keeps Verify button disabled", "Sign In on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User selects single fabric - Cotton Italy", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Default price range is shown on page load", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC06 - Empty OTP field keeps Verify button disabled", "Sign In on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC07 - Product listing still shows at least one product after country switch", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>7</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F08 - Cart contains the added fabric product", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC09 - INR symbol is not visible after switching to UAE", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>17</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC02 - Default India page shows INR symbol on all product prices", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All checkboxes are cleared after reset", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>11</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User deselects a fabric after selecting it", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>14</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User expands Neck Pattern section", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price range filter with boundary values", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search with valid keyword shows results", "Search Functionality"</td>
+<td></td>
+<td>3</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User selects single fabric - Chiffon Zari", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F06 - Success notification appears after adding fabric to cart", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fabric Material section is collapsed by default", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC08 - AED symbol is not visible when India is selected by default", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>3</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC03 - Product price is displayed", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price range filter with boundary values", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search trims whitespace and returns results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Single character search does not crash", "Search Functionality"</td>
+<td></td>
+<td>1</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC11 - Country selector dropdown closes after a valid selection", "Country Currency Switch on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F14 - Cart shows empty message after removing all items", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>41</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Setting Max Price to 0 shows no results", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F02 - Product name is displayed on the fabrics page", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>4</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC_F09 - Product name in cart matches the fabric product added", "Fabrics Product Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price range filter with boundary values", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fabric materials can be selected", "Fabric Material and Neck Pattern Filter on WowFashions"</td>
+<td></td>
+<td>9</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC11 - Empty cart shows appropriate message", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>45</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User sets a custom Max Price using input box", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>5</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TC05 - Clicking Add to Cart shows success notification", "Add to Cart on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Price range filter with boundary values", "Price Range Filter on WowFashions"</td>
+<td></td>
+<td>6</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+<tr>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Partial keyword search returns results", "Search Functionality"</td>
+<td></td>
+<td>2</td>
+<td>runners.TestRunner@43c1b556</td></tr>
+</table><p>
+</body>
+</html>
