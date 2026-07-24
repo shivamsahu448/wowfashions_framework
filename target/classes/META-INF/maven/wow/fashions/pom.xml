@@ -98,5 +98,42 @@
       </plugin>
     </plugins>
   </build>
+  
+  name: Java TestNG CI (Maven)
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up JDK 17 (or your required Java version)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      # 3. Run TestNG tests
+      - name: Run TestNG Tests
+        run: mvn clean test
+
+      # 4. Upload Test Reports as Artifacts (runs even if tests fail)
+      - name: Upload TestNG Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-results-maven
+          path: target/surefire-reports/
 
 </project>
